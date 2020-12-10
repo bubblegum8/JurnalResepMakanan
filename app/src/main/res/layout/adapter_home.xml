@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".HomeAdapter">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -21,7 +22,7 @@
             <ImageView
                 android:id="@+id/gambar_masakan"
                 android:layout_width="match_parent"
-                android:height="250sp"
+                android:layout_height="250sp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_gravity="top"
