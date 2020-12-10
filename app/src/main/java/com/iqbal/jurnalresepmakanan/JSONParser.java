@@ -23,7 +23,7 @@ public class JSONParser {
         this.context = context;
     }
 
-    public ArrayList<Category> getresepCategories() {
+    public ArrayList<Category> getResepKategori() {
         ArrayList<Category> categories = new ArrayList<>();
 
         try {
@@ -63,8 +63,8 @@ public class JSONParser {
                 String waktu = DapurUmamiJson.getString("waktu");
                 String size = DapurUmamiJson.getString("size");
 
-                Log.d("resepnama", nama);
-                Log.d("resepImage", image);
+                Log.d("nama_masakan", nama);
+                Log.d("gambar_masakan", image);
 
 
                 JSONArray jsonArray = DapurUmamiJson.getJSONArray("bahan");

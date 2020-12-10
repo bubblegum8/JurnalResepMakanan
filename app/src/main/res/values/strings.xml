@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Jurnal Resep Makanan</string>
+    <string name="recipe_source">recipe_source</string>
+    <string name="placeholder">Placeholder</string>
+    <string name="tahapan">Tahapan</string>
+    <string name="bahan">Bahan-Bahan</string>
+    <string name="recipe_information">Nama Masakan</string>
+    <string name="recipe_image">gambar_masakan</string>
 </resources>

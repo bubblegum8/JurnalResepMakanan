@@ -66,10 +66,10 @@ public class Resep implements Serializable {
     }
 
     public void printData() {
-        Log.d("Recipenama", nama);
-        Log.d("Recipewaktu", waktu);
-        Log.d("RecipeSize", size);
-        Log.d("RecipeImage", image);
+        Log.d("nama", nama);
+        Log.d("waktu", waktu);
+        Log.d("size", size);
+        Log.d("image", image);
 
     }
 
