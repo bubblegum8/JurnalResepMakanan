@@ -8,15 +8,15 @@ import java.util.List;
 
 public class Category implements Serializable {
 
-    private String name;
+    private String nama;
     private String image;
 
-    public String getName() {
-        return name;
+    public String getNama() {
+        return nama;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setnama(String nama) {
+        this.nama = nama;
     }
 
     public String getImage() {

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class ListMasakan extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private RecipeListAdapter adapter;
+    private ListAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +23,9 @@ public class ListMasakan extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(category);
-        ArrayList<Resep> resep = new JSONParser(this).getRecipesFromCategory(category);
+        ArrayList<Resep> resep = new JSONParser(this).getresepsFromCategory(category);
 
-        adapter = new RecipeListAdapter(this, recipes);
+        adapter = new ListAdapter(this, resep);
 
         recyclerView = findViewById(R.id.recycler);
         recyclerView.setAdapter(adapter);

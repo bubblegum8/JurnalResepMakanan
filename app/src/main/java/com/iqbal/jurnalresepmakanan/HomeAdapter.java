@@ -38,7 +38,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.RecipeViewHold
     public void onBindViewHolder(RecipeViewHolder holder, int position) {
         Category currentCategory = categories.get(position);
         // set recycler view card text
-        holder.cardText.setText(currentCategory.getName());
+        holder.cardText.setText(currentCategory.getNama());
         // set recycler view card image
         try {
             // get input stream
@@ -53,7 +53,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.RecipeViewHold
             e.getStackTrace();
         }
 
-        Log.d("MyTag", currentCategory.getName());
+        Log.d("MyTag", currentCategory.getNama());
         Log.d("MyTag", currentCategory.getImage());
     }
 
@@ -80,9 +80,9 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.RecipeViewHold
         public void onClick(View v) {
             // Get the position of the item that was clicked.
             int mPosition = getLayoutPosition();
-            String category = categories.get(mPosition).getName();
+            String category = categories.get(mPosition).getNama();
 
-            Intent intent = new Intent(context, RecipeListActivity.class);
+            Intent intent = new Intent(context, ListAdapter.class);
             intent.putExtra("category", category);
 
             context.startActivity(intent);

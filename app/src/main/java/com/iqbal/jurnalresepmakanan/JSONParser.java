@@ -48,8 +48,8 @@ public class JSONParser {
         return categories;
     }
 
-    public ArrayList<resep> getresepsFromCategory(String category) {
-        ArrayList<resep> reseps = new ArrayList<>();
+    public ArrayList<Resep> getresepsFromCategory(String category) {
+        ArrayList<Resep> reseps = new ArrayList<>();
         try {
             JSONArray resepArray = new JSONObject(loadJSONFromAsset())
                     .getJSONObject(category)
@@ -79,7 +79,7 @@ public class JSONParser {
                     tahapan.add(jsonArray.getString(j));
                 }
 
-                Resep resep = new resep();
+                Resep resep = new Resep();
                 resep.setnama(nama);
                 resep.setImage(image);
                 resep.setwaktu(waktu);

@@ -38,11 +38,11 @@ public class ResepDetail extends AppCompatActivity {
     protected void renderResep(Resep rec) {
         // set resep name
         TextView resepName = ((TextView)findViewById(R.id.nama_masakan));
-        resepName.setText(rec.getName());
-        if (rec.getName().length() > 25)
+        resepName.setText(rec.getnama());
+        if (rec.getnama().length() > 25)
             resepName.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 18);
         // set resep time
-        ((TextView)findViewById(R.id.waktu_masakan)).setText(rec.getTime());
+        ((TextView)findViewById(R.id.waktu_masakan)).setText(rec.getwaktu());
         // set resep size
         ((TextView)findViewById(R.id.porsi_masakan)).setText(rec.getSize());
         // set resep image
@@ -59,16 +59,15 @@ public class ResepDetail extends AppCompatActivity {
             e.getStackTrace();
         }
         // set resep ingredients
-        ((TextView)findViewById(R.id.bahan_masakan)).setText(Html.fromHtml(rec.getIngredientsHTML()));
+        ((TextView)findViewById(R.id.bahan_masakan)).setText(Html.fromHtml(rec.getbahanHTML()));
         // set resep steps
-        ((TextView)findViewById(R.id.tahap_masakan)).setText(Html.fromHtml(rec.getStepsHTML()));
+        ((TextView)findViewById(R.id.tahap_masakan)).setText(Html.fromHtml(rec.gettahapanHTML()));
         // set resep source url
         ((Button)findViewById(R.id.resep_source)).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse(rec.getUrl()));
                 startActivity(intent);
             }
         });

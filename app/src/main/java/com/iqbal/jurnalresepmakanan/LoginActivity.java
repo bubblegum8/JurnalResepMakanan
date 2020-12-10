@@ -27,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
                String usernameKey = username.getText().toString();
                String passwordKey = password.getText().toString();
 
-               if(usernameKey.equals("aldy") && passwordKey.equals("123456")){
+               if(usernameKey.equals("admin") && passwordKey.equals("123456")){
                    Toast.makeText(getApplicationContext(), "LOGIN BERHASIL", Toast.LENGTH_SHORT).show();
                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                    intent.putExtra("username", usernameKey);

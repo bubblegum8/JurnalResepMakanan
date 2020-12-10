@@ -1,11 +1,11 @@
-package com.example.foodrecipes;
+package com.iqbal.jurnalresepmakanan;
 
 import android.util.Log;
 
 import java.io.Serializable;
 import java.util.List;
 
-public class Recipe implements Serializable {
+public class Resep implements Serializable {
 
     private String nama;
     private String image;

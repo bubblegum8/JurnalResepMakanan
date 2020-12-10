@@ -25,7 +25,7 @@ public class HomeActivity extends AppCompatActivity {
         TextView halloUser = findViewById(R.id.hallo_user);
         halloUser.setText(String.format("Selamat Datang %s !", getIntent().getStringExtra("username")));
 
-        ArrayList<Category> categories = new JSONParser(this).getRecipeCategories();
+        ArrayList<Category> categories = new JSONParser(this).getresepCategories();
         adapter = new HomeAdapter(this, categories);
 
 
